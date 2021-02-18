@@ -4,7 +4,8 @@ const colors = {
 	green: '#6D9B12',
 	blue: '#4285F4',
 	grey: '#E5E5E5',
-	white: '#fff'
+	white: '#fff',
+	red: '#ff0000'
 };
 
 const defaultTheme = createMuiTheme();
@@ -88,13 +89,29 @@ const theme = createMuiTheme({
 		},
 		MuiTextField: {
 			root: {
-				width: '550px',
-				height: '50px',
 				background: colors.grey,
 				borderRadius: '6px',
-				border: 'none',
 			},
-		}
+		},
+		MuiInput: {
+			input: {
+				background: colors.grey,
+				borderRadius: '6px',
+			},
+		},
+		MuiOutlinedInput: {
+			notchedOutline: {
+				borderWidth: '0px'
+			},
+			error: {
+				// border: '1px solid red',
+				// borderColor: colors.red
+			},
+			input: {
+				padding: '17.5px 20px'
+			},
+		},
+
 	}
 });
 

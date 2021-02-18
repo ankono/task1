@@ -11,6 +11,7 @@ interface TextFieldProps {
 	helperText?: any;
 	type?: string;
 	error?: any;
+	fullWidth?: boolean;
 }
 
 const TextField: FC<TextFieldProps> = (props) => {
@@ -24,7 +25,9 @@ const TextField: FC<TextFieldProps> = (props) => {
 		onChange,
 		helperText,
 		type,
-		error
+		error,
+		fullWidth = true,
+
 	} = props;
 
 	return (
@@ -38,6 +41,7 @@ const TextField: FC<TextFieldProps> = (props) => {
 			helperText={helperText}
 			type={type}
 			error={error}
+			fullWidth={fullWidth}
 		/>
 	)
 
