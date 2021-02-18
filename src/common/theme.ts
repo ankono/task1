@@ -111,6 +111,19 @@ const theme = createMuiTheme({
 				padding: '17.5px 20px'
 			},
 		},
+		MuiFormHelperText: {
+			root: {
+				position: 'absolute',
+				bottom: '-20px'
+			}
+		},
+		MuiInputLabel: {
+			outlined: {
+				focused: {
+					fontSize: '50px'
+				},
+			}
+		}
 
 	}
 });

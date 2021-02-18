@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import Box from '../Box';
 import Button from '../Button';
 import TextField from '../TextField';
@@ -8,9 +8,13 @@ import { Checkbox, FormControlLabel } from '@material-ui/core';
 import * as Yup from 'yup';
 import { ReactComponent as GoogleLogo } from '../../icons/google.svg';
 import { ReactComponent as MicrosoftLogo } from '../../icons/microsoft.svg';
+import VisibilityOffOutlinedIcon from '@material-ui/icons/VisibilityOffOutlined';
+import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
 
 
 const SignUp = () => {
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -71,6 +75,9 @@ const SignUp = () => {
               onChange={formik.handleChange}
               helperText={formik.touched.fullName && formik.errors.fullName}
               error={formik.touched.fullName && Boolean(formik.errors.fullName)}
+              InputProps={{
+
+              }}
             />
           </Box>
           <Box mb="35px">
@@ -89,11 +96,19 @@ const SignUp = () => {
               id="password"
               name="password"
               label="Password"
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               value={formik.values.password}
               onChange={formik.handleChange}
               helperText={formik.touched.password && formik.errors.password}
               error={formik.touched.password && Boolean(formik.errors.password)}
+              InputProps={{
+                endAdornment:
+                  <Box style={{ cursor: "pointer" }} onClick={() => setShowPassword(!showPassword)}>
+                    {showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
+                  </Box>
+
+              }
+              }
             />
           </Box>
           <Box mt="40px" mb="40px">
