@@ -21,6 +21,4 @@ const TextField: FC<TextFieldProps> = (props) => {
 
 }
 
-//test
-
 export default TextField;
