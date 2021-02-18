@@ -9,7 +9,8 @@ interface TextFieldProps {
 	value?: string;
 	onChange?: any;
 	helperText?: any;
-	type?: string
+	type?: string;
+	error?: any;
 }
 
 const TextField: FC<TextFieldProps> = (props) => {
@@ -22,7 +23,8 @@ const TextField: FC<TextFieldProps> = (props) => {
 		value,
 		onChange,
 		helperText,
-		type
+		type,
+		error
 	} = props;
 
 	return (
@@ -35,6 +37,7 @@ const TextField: FC<TextFieldProps> = (props) => {
 			onChange={onChange}
 			helperText={helperText}
 			type={type}
+			error={error}
 		/>
 	)
 
