@@ -5,7 +5,7 @@ interface ButtonProps {
 	variant?: 'contained' | 'outlined' | 'text';
 	size: 'large' | 'medium' | 'small';
 	color: 'default' | 'primary' | 'secondary';
-	children: string;
+	children: ReactElement | ReactElement[] | string;
 	disableElevation?: boolean;
 	type?: 'submit'
 }

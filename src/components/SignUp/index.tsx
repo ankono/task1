@@ -41,7 +41,7 @@ const SignUp = () => {
         </Typography>
       </Box>
       <Box>
-        <Button size="large" variant="contained" color="primary">Sign up with Google</Button>
+        <Button size="large" variant="contained" color="default">Sign up with Google</Button>
         <Button size="large" variant="contained" color="secondary">Sign up with Microsoft</Button>
       </Box>
       <Box>

@@ -1,4 +1,4 @@
-import {createMuiTheme} from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const colors = {
 	green: '#6D9B12',
@@ -63,7 +63,7 @@ const theme = createMuiTheme({
 	},
 	overrides: {
 		MuiButton: {
-			root: {
+			contained: {
 				backgroundColor: colors.blue,
 				background: colors.blue,
 				color: colors.white,
