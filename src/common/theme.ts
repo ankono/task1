@@ -70,8 +70,6 @@ const theme = createMuiTheme({
 				width: '133px',
 				height: '50px',
 				borderRadius: '6px',
-				marginLeft: defaultTheme.spacing(1.875),
-				marginRight: defaultTheme.spacing(1.875),
 				fontFamily: 'Roboto',
 				fontWeight: 900,
 				fontSize: '16px',

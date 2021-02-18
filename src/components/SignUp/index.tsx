@@ -34,15 +34,23 @@ const SignUp = () => {
   })
 
   return (
-    <Box width="550px">
-      <Box>
+    <Box width="550px" m="auto" mt="50px" mb="50px">
+      <Box mb="60px" width="410px">
         <Typography variant="h2">
           Sign up to set your brand up for success
         </Typography>
       </Box>
-      <Box>
+      <Box display="flex" justifyContent="space-between">
         <Button size="large" variant="contained" color="default">Sign up with Google</Button>
         <Button size="large" variant="contained" color="secondary">Sign up with Microsoft</Button>
+      </Box>
+
+      <Box display="flex" alignItems="center" mt="34px" mb="34px">
+        <Box borderBottom="1px solid #E5E5E5" height="1px" flexGrow="1" />
+        <Box mr="10px" ml="10px">
+          <Typography variant="h6">or</Typography>
+        </Box>
+        <Box borderBottom="1px solid #E5E5E5" height="1px" flexGrow="1" />
       </Box>
       <Box>
         <form onSubmit={formik.handleSubmit}>
