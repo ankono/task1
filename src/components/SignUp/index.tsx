@@ -8,9 +8,7 @@ import { Checkbox, FormControlLabel } from '@material-ui/core';
 import * as Yup from 'yup';
 
 
-
 const SignUp = () => {
-
 
   const formik = useFormik({
     initialValues: {
@@ -34,7 +32,6 @@ const SignUp = () => {
       alert(JSON.stringify(values, null, 2));
     },
   })
-
 
   return (
     <Box width="550px">
@@ -92,7 +89,6 @@ const SignUp = () => {
                 </Typography>
               }
             />
-
 
           </Box>
           <Button type="submit" size="large" variant="contained" color="primary">Sign Up</Button>
