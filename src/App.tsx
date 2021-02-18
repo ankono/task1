@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import StoryBook from './components/StoryBook';
 import theme from './common/theme';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Switch>
           <Route path="/story-book" exact>
             <StoryBook/>
+          </Route>
+          <Route path="/sign-up" exact>
+            <SignUp/>
           </Route>
         </Switch>
       </ThemeProvider>
