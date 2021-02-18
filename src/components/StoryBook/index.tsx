@@ -27,7 +27,11 @@ const StoryBook = () => {
 			</Box>
 			<Box pt={5} mb={1}>
 				<Box>
-					<TextField label="Placeholder"/>
+					<TextField
+						id="fullName"
+						name="fullName"
+						label="Full Name"
+					/>
 				</Box>
 			</Box>
 			<Box pt={5} mb={1} display="grid" gridRowGap="24px">

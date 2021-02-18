@@ -1,5 +1,5 @@
-import React, {FC, ReactElement} from 'react';
-import {Button as ButtonBase} from '@material-ui/core';
+import React, { FC, ReactElement } from 'react';
+import { Button as ButtonBase } from '@material-ui/core';
 
 interface ButtonProps {
 	variant?: 'contained' | 'outlined' | 'text';
@@ -7,16 +7,18 @@ interface ButtonProps {
 	color: 'default' | 'primary' | 'secondary';
 	children: string;
 	disableElevation?: boolean;
+	type?: 'submit'
 }
 
 const Button: FC<ButtonProps> = (props) => {
 
 	const {
-		variant='contained',
+		variant = 'contained',
 		size,
 		color,
 		disableElevation = true,
-		children
+		children,
+		type
 	} = props;
 
 	return (
@@ -25,6 +27,7 @@ const Button: FC<ButtonProps> = (props) => {
 			color={color}
 			variant={variant}
 			disableElevation={disableElevation}
+			type={type}
 		>
 			{children}
 		</ButtonBase>
