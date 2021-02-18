@@ -1,10 +1,12 @@
-import {createMuiTheme} from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const colors = {
 	green: '#6D9B12',
 	blue: '#4285F4',
 	grey: '#E5E5E5',
-	white: '#fff'
+	lightGrey: '#fefefe',
+	white: '#fff',
+	red: '#ff0000'
 };
 
 const defaultTheme = createMuiTheme();
@@ -63,41 +65,67 @@ const theme = createMuiTheme({
 	},
 	overrides: {
 		MuiButton: {
-			root: {
+			contained: {
 				backgroundColor: colors.blue,
 				background: colors.blue,
 				color: colors.white,
-				width: '133px',
-				height: '50px',
 				borderRadius: '6px',
-				marginLeft: defaultTheme.spacing(1.875),
-				marginRight: defaultTheme.spacing(1.875),
 				fontFamily: 'Roboto',
 				fontWeight: 900,
 				fontSize: '16px',
+				padding: '15.5px 20px',
 				lineHeight: '19px',
 				textTransform: 'none'
 			},
 			sizeLarge: {
-				width: '270px',
+				padding: '15.5px 20px',
 				fontSize: '16px',
 				lineHeight: '19px',
 			},
 			sizeSmall: {
-				width: '120px',
-				height: '40px',
+				padding: '15.5px 20px',
 				fontSize: '16px',
 				lineHeight: '19px',
 			},
 		},
 		MuiTextField: {
 			root: {
-				width: '550px',
-				height: '50px',
 				background: colors.grey,
-				borderRadius: '6px'
+				borderRadius: '6px',
+			},
+		},
+		MuiInput: {
+			input: {
+
+				background: colors.grey,
+				borderRadius: '6px',
+			},
+		},
+		MuiOutlinedInput: {
+			notchedOutline: {
+				borderWidth: '0px'
+			},
+			error: {
+
+			},
+			input: {
+				padding: '17.5px 20px',
+			},
+		},
+		MuiFormHelperText: {
+			root: {
+				position: 'absolute',
+				bottom: '-20px'
+			}
+		},
+		MuiInputLabel: {
+			outlined: {
+				focused: {
+					fontSize: '50px'
+				},
 			}
 		}
+
 	}
 });
 
