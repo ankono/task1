@@ -6,6 +6,8 @@ import Typography from '../Typography';
 import { useFormik } from 'formik';
 import { Checkbox, FormControlLabel } from '@material-ui/core';
 import * as Yup from 'yup';
+import { ReactComponent as GoogleLogo } from '../../icons/google.svg';
+import { ReactComponent as MicrosoftLogo } from '../../icons/microsoft.svg';
 
 
 const SignUp = () => {
@@ -29,7 +31,7 @@ const SignUp = () => {
         .oneOf([true])
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      console.log(JSON.stringify(values, null, 2));
     },
   })
 
@@ -40,9 +42,15 @@ const SignUp = () => {
           Sign up to set your brand up for success
         </Typography>
       </Box>
-      <Box display="flex" justifyContent="space-between">
-        <Button size="large" variant="contained" color="default">Sign up with Google</Button>
-        <Button size="large" variant="contained" color="secondary">Sign up with Microsoft</Button>
+      <Box display="grid" gridTemplateColumns="270px 270px" gridGap="10px">
+        <Button size="large" variant="contained" color="default">
+          <Box mr="10px" lineHeight="0"><GoogleLogo /></Box>
+            Sign up with Google
+        </Button>
+        <Button size="large" variant="contained" color="secondary">
+          <Box mr="10px" lineHeight="0"><MicrosoftLogo /></Box>
+          Sign up with Microsoft
+          </Button>
       </Box>
 
       <Box display="flex" alignItems="center" mt="34px" mb="34px">
@@ -54,41 +62,48 @@ const SignUp = () => {
       </Box>
       <Box>
         <form onSubmit={formik.handleSubmit}>
-          <TextField
-            id="fullName"
-            name="fullName"
-            label="Full Name"
-            value={formik.values.fullName}
-            onChange={formik.handleChange}
-            helperText={formik.touched.fullName && formik.errors.fullName}
-            error={formik.touched.fullName && Boolean(formik.errors.fullName)}
-          />
-          <TextField
-            id="email"
-            name="email"
-            label="Email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            helperText={formik.touched.email && formik.errors.email}
-            error={formik.touched.email && Boolean(formik.errors.email)}
-          />
-          <TextField
-            id="password"
-            name="password"
-            label="Password"
-            type="password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            helperText={formik.touched.password && formik.errors.password}
-            error={formik.touched.password && Boolean(formik.errors.password)}
-          />
-          <Box>
+          <Box mb="35px">
+            <TextField
+              id="fullName"
+              name="fullName"
+              label="Full Name"
+              value={formik.values.fullName}
+              onChange={formik.handleChange}
+              helperText={formik.touched.fullName && formik.errors.fullName}
+              error={formik.touched.fullName && Boolean(formik.errors.fullName)}
+            />
+          </Box>
+          <Box mb="35px">
+            <TextField
+              id="email"
+              name="email"
+              label="Email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              helperText={formik.touched.email && formik.errors.email}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+            />
+          </Box>
+          <Box mb="35px">
+            <TextField
+              id="password"
+              name="password"
+              label="Password"
+              type="password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              helperText={formik.touched.password && formik.errors.password}
+              error={formik.touched.password && Boolean(formik.errors.password)}
+            />
+          </Box>
+          <Box mt="40px" mb="40px">
             <FormControlLabel
               control={
                 <Checkbox
                   name="checkbox"
                   checked={formik.values.checkbox}
                   onChange={formik.handleChange}
+                  color={formik.values.checkbox ? 'primary' : 'secondary'}
                 />
               }
               label={
@@ -99,7 +114,11 @@ const SignUp = () => {
             />
 
           </Box>
-          <Button type="submit" size="large" variant="contained" color="primary">Sign Up</Button>
+          <Box width="270px">
+            <Button type="submit" size="large" variant="contained" color="primary">Sign Up
+            </Button>
+          </Box>
+
         </form>
       </Box>
     </Box>

@@ -67,23 +67,21 @@ const theme = createMuiTheme({
 				backgroundColor: colors.blue,
 				background: colors.blue,
 				color: colors.white,
-				width: '133px',
-				height: '50px',
 				borderRadius: '6px',
 				fontFamily: 'Roboto',
 				fontWeight: 900,
 				fontSize: '16px',
+				padding: '15.5px 20px',
 				lineHeight: '19px',
 				textTransform: 'none'
 			},
 			sizeLarge: {
-				width: '270px',
+				padding: '15.5px 20px',
 				fontSize: '16px',
 				lineHeight: '19px',
 			},
 			sizeSmall: {
-				width: '120px',
-				height: '40px',
+				padding: '15.5px 20px',
 				fontSize: '16px',
 				lineHeight: '19px',
 			},
@@ -93,8 +91,9 @@ const theme = createMuiTheme({
 				width: '550px',
 				height: '50px',
 				background: colors.grey,
-				borderRadius: '6px'
-			}
+				borderRadius: '6px',
+				border: 'none',
+			},
 		}
 	}
 });

@@ -16,7 +16,7 @@ interface TextFieldProps {
 const TextField: FC<TextFieldProps> = (props) => {
 
 	const {
-		variant = 'filled',
+		variant = 'outlined',
 		label,
 		id,
 		name,

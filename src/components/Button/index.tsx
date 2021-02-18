@@ -5,9 +5,10 @@ interface ButtonProps {
 	variant?: 'contained' | 'outlined' | 'text';
 	size: 'large' | 'medium' | 'small';
 	color: 'default' | 'primary' | 'secondary';
-	children: ReactElement | ReactElement[] | string;
+	children: ReactElement | ReactElement[] | string | any;
 	disableElevation?: boolean;
-	type?: 'submit'
+	type?: 'submit',
+	fullWidth?: boolean
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -18,7 +19,8 @@ const Button: FC<ButtonProps> = (props) => {
 		color,
 		disableElevation = true,
 		children,
-		type
+		type,
+		fullWidth = true
 	} = props;
 
 	return (
@@ -28,6 +30,7 @@ const Button: FC<ButtonProps> = (props) => {
 			variant={variant}
 			disableElevation={disableElevation}
 			type={type}
+			fullWidth={fullWidth}
 		>
 			{children}
 		</ButtonBase>
