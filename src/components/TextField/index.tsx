@@ -12,6 +12,7 @@ interface TextFieldProps {
 	type?: string;
 	error?: any;
 	fullWidth?: boolean;
+	InputProps?: object;
 }
 
 const TextField: FC<TextFieldProps> = (props) => {
@@ -27,6 +28,7 @@ const TextField: FC<TextFieldProps> = (props) => {
 		type,
 		error,
 		fullWidth = true,
+		InputProps,
 
 	} = props;
 
@@ -42,6 +44,7 @@ const TextField: FC<TextFieldProps> = (props) => {
 			type={type}
 			error={error}
 			fullWidth={fullWidth}
+			InputProps={InputProps}
 		/>
 	)
 
