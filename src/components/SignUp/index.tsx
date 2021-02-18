@@ -106,9 +106,7 @@ const SignUp = () => {
                   <Box style={{ cursor: "pointer" }} onClick={() => setShowPassword(!showPassword)}>
                     {showPassword ? <VisibilityOutlinedIcon /> : <VisibilityOffOutlinedIcon />}
                   </Box>
-
-              }
-              }
+              }}
             />
           </Box>
           <Box mt="40px" mb="40px">

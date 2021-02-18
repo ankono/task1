@@ -15,6 +15,7 @@ interface TextFieldProps {
 	InputProps?: object;
 }
 
+
 const TextField: FC<TextFieldProps> = (props) => {
 
 	const {
@@ -29,7 +30,6 @@ const TextField: FC<TextFieldProps> = (props) => {
 		error,
 		fullWidth = true,
 		InputProps,
-
 	} = props;
 
 	return (

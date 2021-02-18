@@ -4,6 +4,7 @@ const colors = {
 	green: '#6D9B12',
 	blue: '#4285F4',
 	grey: '#E5E5E5',
+	lightGrey: '#fefefe',
 	white: '#fff',
 	red: '#ff0000'
 };
@@ -95,6 +96,7 @@ const theme = createMuiTheme({
 		},
 		MuiInput: {
 			input: {
+
 				background: colors.grey,
 				borderRadius: '6px',
 			},
@@ -104,11 +106,10 @@ const theme = createMuiTheme({
 				borderWidth: '0px'
 			},
 			error: {
-				// border: '1px solid red',
-				// borderColor: colors.red
+
 			},
 			input: {
-				padding: '17.5px 20px'
+				padding: '17.5px 20px',
 			},
 		},
 		MuiFormHelperText: {
